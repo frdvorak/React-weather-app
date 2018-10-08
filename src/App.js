@@ -103,7 +103,7 @@ class App extends Component {
           <CityTile name={'Barcelona'} city={'barcelona'} country={'es'} tileClick={this.tileClick}/>
           <CityTile name={'Florence'} city={'florence'} country={'it'} tileClick={this.tileClick}/>
           <CityTile name={'Tokyo'} city={'tokyo'} country={'jp'} tileClick={this.tileClick}/>
-          <CityTile name={'Hong Kong'} city={'hong kong'} country={'cn'} tileClick={this.tileClick}/>
+          <CityTile name={'HongKong'} city={'hong kong'} country={'cn'} tileClick={this.tileClick}/>
           <CityTile name={'Kiev'} city={'kiev'} country={'ua'} tileClick={this.tileClick}/>
           <CityTile name={'Prague'} city={'prague'} country={'cz'} tileClick={this.tileClick}/>
           <CityTile name={'Vienna'} city={'vienna'} country={'at'} tileClick={this.tileClick}/>
