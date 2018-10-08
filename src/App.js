@@ -9,13 +9,45 @@ const API_KEY = '4f6f72308473314b6727d9fb36b07e22';
 
 class App extends Component {
   state = {
-    city: undefined,
+    city: 'london',
     temperature: undefined,
-    country: undefined,
+    country: 'uk',
     humidity: undefined,
     description: undefined,
     error: undefined
   }
+
+  // show current data for default city (London)
+  componentDidMount = async () => {
+    console.log('aaa');
+    const city = this.state.city;
+    const country = this.state.country;
+    // call api, convert it to JSON, save that in variable 'data'
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+    const data = await api_call.json();
+      if (city && country && data.name) { //data.name is incuded so we setState only when we find city in the database
+        console.log(data);
+        this.setState({
+          city: data.name,
+          temperature: data.main.temp,
+          country: data.sys.country,
+          humidity: data.main.humidity,
+          description: data.weather[0].description,
+          error: ""
+        });
+      } else {
+        this.setState({
+          temperature: undefined,
+          city: undefined,
+          country: undefined,
+          humidity: undefined,
+          description: undefined,
+          error: "Please enter the city and country"
+        })
+      }
+  };
+
+  // handle when the user clicks on one of the premade city tiles
   tileClick = async (mesto, zeme) => {
     console.log(mesto);
     const city = mesto;
@@ -45,10 +77,10 @@ class App extends Component {
           description: undefined,
           error: "Please enter the city and country"
         })
-
       }
   }
   
+  // handle when the user inputs data in the form
   getWeather = async (e)=> {
     e.preventDefault(e);
     const city = e.target.elements.city.value;
@@ -82,6 +114,7 @@ class App extends Component {
       }
     
   }
+ 
   render() {
     return (
       <div className="App">
