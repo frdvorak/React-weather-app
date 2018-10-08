@@ -118,16 +118,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Titles />
-        <Form getWeather={this.getWeather}/>
-        <Weather 
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
+        <div class="header">
+          <div className="section-one">
+            <Titles />
+            
+          </div>
+          <div className="section-two">
+          <Weather 
+            temperature={this.state.temperature}
+            city={this.state.city}
+            country={this.state.country}
+            humidity={this.state.humidity}
+            description={this.state.description}
+            error={this.state.error}
+          />
+          </div>
+          <Form getWeather={this.getWeather}/>
+        </div>
         <div className='container row align-items-center justify-content-center'>
           <CityTile name={'Paris'} city={'paris'} country={'fr'} tileClick={this.tileClick}/>
           <CityTile name={'NewYork'} city={'new york'} country={'us'} tileClick={this.tileClick}/>

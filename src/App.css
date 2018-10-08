@@ -26,6 +26,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/** Header styles ********************************/
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+}
+.section-one, .section-two {
+  border: 1px solid black;
+  padding: 10px;
+}
+h1 {
+  width: 100%;
+  display: block;
+}
 
 /** CityTile styles *****************************/
 
