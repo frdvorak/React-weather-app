@@ -1,5 +1,9 @@
 Currently working on this, app built with React.js + OpenWeatherMap API that shows user the current weather at the selected location
+Weather app 1.1
 
+![weather-app](https://user-images.githubusercontent.com/40566364/46694213-fdcf7580-cc03-11e8-8242-ad70f669394d.jpg)
+
+Weather app 0.5
 ![weatherapp](https://user-images.githubusercontent.com/40566364/46632773-a538a380-cb43-11e8-8ed4-1c08920947fa.jpg)
 
 
