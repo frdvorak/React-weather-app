@@ -40,7 +40,12 @@ h1 {
   width: 100%;
   display: block;
 }
+/** Form section ********************************/
+.form-section {
+  border: 1px solid black;
+  width: 100%;
 
+}
 /** CityTile styles *****************************/
 
 .row {

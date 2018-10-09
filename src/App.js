@@ -133,8 +133,10 @@ class App extends Component {
             error={this.state.error}
           />
           </div>
-          <Form getWeather={this.getWeather}/>
         </div>
+        <div className="form-section">
+            <Form getWeather={this.getWeather}/>
+          </div>
         <div className='container row align-items-center justify-content-center'>
           <CityTile name={'Paris'} city={'paris'} country={'fr'} tileClick={this.tileClick}/>
           <CityTile name={'NewYork'} city={'new york'} country={'us'} tileClick={this.tileClick}/>
