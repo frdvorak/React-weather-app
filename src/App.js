@@ -121,7 +121,6 @@ class App extends Component {
         <div class="header">
           <div className="section-one">
             <Titles />
-            
           </div>
           <div className="section-two">
           <Weather 
@@ -137,7 +136,7 @@ class App extends Component {
         <div className="form-section">
             <Form getWeather={this.getWeather}/>
           </div>
-        <div className='container row align-items-center justify-content-center'>
+        <div className='cities-panel container row align-items-center justify-content-center'>
           <CityTile name={'Paris'} city={'paris'} country={'fr'} tileClick={this.tileClick}/>
           <CityTile name={'NewYork'} city={'new york'} country={'us'} tileClick={this.tileClick}/>
           <CityTile name={'Berlin'} city={'berlin'} country={'de'} tileClick={this.tileClick}/>
