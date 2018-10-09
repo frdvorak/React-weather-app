@@ -1,6 +1,6 @@
 Currently working on this, app built with React.js + OpenWeatherMap API that shows user the current weather at the selected location
 
-![weather-app](https://user-images.githubusercontent.com/40566364/46694318-57d03b00-cc04-11e8-8f6b-b55a3d029404.jpg)
+![weather-app](https://user-images.githubusercontent.com/40566364/46694404-a5e53e80-cc04-11e8-838f-e95e64114087.jpg)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
