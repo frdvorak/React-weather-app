@@ -35,6 +35,12 @@
   font-family: Impact;
   font-size: 25px;
 }
+/** Section Two - WeatherIcon Component *************/
+img {
+  width: 150px;
+}
+
+WeatherIcon
 /** Form section ********************************/
 .form-section {
   width: 100%;
