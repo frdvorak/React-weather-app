@@ -9,9 +9,9 @@ const API_KEY = '4f6f72308473314b6727d9fb36b07e22';
 
 class App extends Component {
   state = {
-    city: 'london',
+    city: 'London',
     temperature: undefined,
-    country: 'uk',
+    country: 'UK',
     humidity: undefined,
     description: undefined,
     error: undefined
@@ -23,7 +23,7 @@ class App extends Component {
     const city = this.state.city;
     const country = this.state.country;
     // call api, convert it to JSON, save that in variable 'data'
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+    const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
       if (city && country && data.name) { //data.name is incuded so we setState only when we find city in the database
         console.log(data);
@@ -53,7 +53,7 @@ class App extends Component {
     const city = mesto;
     const country = zeme;
     // call api, convert it to JSON, save that in variable 'data'
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+    const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     
     //console.log(data.name)
@@ -86,7 +86,7 @@ class App extends Component {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     // call api, convert it to JSON, save that in variable 'data'
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+    const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     
     //console.log(data.name)
@@ -137,21 +137,21 @@ class App extends Component {
             <Form getWeather={this.getWeather}/>
           </div>
         <div className='cities-panel container row align-items-center justify-content-center'>
-          <CityTile name={'Paris'} city={'paris'} country={'fr'} tileClick={this.tileClick}/>
-          <CityTile name={'NewYork'} city={'new york'} country={'us'} tileClick={this.tileClick}/>
-          <CityTile name={'Berlin'} city={'berlin'} country={'de'} tileClick={this.tileClick}/>
-          <CityTile name={'Warsaw'} city={'warsaw'} country={'poland'} tileClick={this.tileClick}/>
-          <CityTile name={'Barcelona'} city={'barcelona'} country={'es'} tileClick={this.tileClick}/>
-          <CityTile name={'Florence'} city={'florence'} country={'it'} tileClick={this.tileClick}/>
-          <CityTile name={'Tokyo'} city={'tokyo'} country={'jp'} tileClick={this.tileClick}/>
-          <CityTile name={'HongKong'} city={'hong kong'} country={'cn'} tileClick={this.tileClick}/>
-          <CityTile name={'Kiev'} city={'kiev'} country={'ua'} tileClick={this.tileClick}/>
-          <CityTile name={'Prague'} city={'prague'} country={'cz'} tileClick={this.tileClick}/>
-          <CityTile name={'Vienna'} city={'vienna'} country={'at'} tileClick={this.tileClick}/>
-          <CityTile name={'Madrid'} city={'madrid'} country={'es'} tileClick={this.tileClick}/>
-          <CityTile name={'Venice'} city={'venice'} country={'it'} tileClick={this.tileClick}/>
-          <CityTile name={'Washington'} city={'washington'} country={'us'} tileClick={this.tileClick}/>
-          <CityTile name={'Amsterdam'} city={'amsterdam'} country={'nl'} tileClick={this.tileClick}/>
+          <CityTile name={'Paris'} city={'paris'} country={'fr'} imageFile={'paris'} tileClick={this.tileClick}/>
+          <CityTile name={'New York'} city={'new york'} country={'us'} imageFile={'newyork'} tileClick={this.tileClick}/>
+          <CityTile name={'Berlin'} city={'berlin'} country={'de'} imageFile={'berlin'} tileClick={this.tileClick}/>
+          <CityTile name={'Warsaw'} city={'warsaw'} country={'poland'} imageFile={'warsaw'} tileClick={this.tileClick}/>
+          <CityTile name={'Barcelona'} city={'barcelona'} country={'es'} imageFile={'barcelona'} tileClick={this.tileClick}/>
+          <CityTile name={'Florence'} city={'florence'} country={'it'} imageFile={'florence'} tileClick={this.tileClick}/>
+          <CityTile name={'Tokyo'} city={'tokyo'} country={'jp'} imageFile={'tokyo'} tileClick={this.tileClick}/>
+          <CityTile name={'Hong Kong'} city={'hong kong'} country={'cn'} imageFile={'hongkong'} tileClick={this.tileClick}/>
+          <CityTile name={'Kiev'} city={'kiev'} country={'ua'} imageFile={'kiev'} tileClick={this.tileClick}/>
+          <CityTile name={'Prague'} city={'prague'} country={'cz'} imageFile={'prague'} tileClick={this.tileClick}/>
+          <CityTile name={'Vienna'} city={'vienna'} country={'at'} imageFile={'vienna'} tileClick={this.tileClick}/>
+          <CityTile name={'Madrid'} city={'madrid'} country={'es'} imageFile={'madrid'} tileClick={this.tileClick}/>
+          <CityTile name={'Venice'} city={'venice'} country={'it'} imageFile={'venice'} tileClick={this.tileClick}/>
+          <CityTile name={'Washington'} city={'washington'} country={'us'} imageFile={'washington'} tileClick={this.tileClick}/>
+          <CityTile name={'Amsterdam'} city={'amsterdam'} country={'nl'} imageFile={'amsterdam'} tileClick={this.tileClick}/>
         </div>
       </div>
     );

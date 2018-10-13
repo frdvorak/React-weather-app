@@ -15,6 +15,10 @@
 .section-one {
   padding: 0;
 }
+.section-one h1 {
+  font-family: Impact;
+  color: black;
+}
 .section-two {
   padding: 20px;
   background: lightgray;
@@ -24,6 +28,12 @@
 }
 .section-one p {
   
+}
+/** Section Two - WEATHER Component *************/
+.biggerText {
+  color: black;
+  font-family: Impact;
+  font-size: 25px;
 }
 /** Form section ********************************/
 .form-section {
