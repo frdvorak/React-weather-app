@@ -122,7 +122,7 @@ class App extends Component {
         <div class="header">
           <div className="section-one">
             <Titles />
-            <WeatherIcon />
+            <WeatherIcon description={this.state.description} />
           </div>
           <div className="section-two">
           <Weather 
@@ -155,7 +155,7 @@ class App extends Component {
           <CityTile name={'Washington'} city={'washington'} country={'us'} imageFile={'washington'} tileClick={this.tileClick}/>
           <CityTile name={'Amsterdam'} city={'amsterdam'} country={'nl'} imageFile={'amsterdam'} tileClick={this.tileClick}/>
         </div>
-        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" rel="noopener noreferrer">CC 3.0 BY</a></div>
       </div>
     );
   }

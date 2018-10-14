@@ -38,6 +38,7 @@
 /** Section Two - WeatherIcon Component *************/
 img {
   width: 150px;
+  margin-bottom: 20px;
 }
 
 WeatherIcon
