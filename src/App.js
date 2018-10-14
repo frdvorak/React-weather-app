@@ -47,10 +47,15 @@ class App extends Component {
         })
       }
   };
-
+  // scroll to the top of the page 
+    scrollToTop = function(){
+    const header = document.querySelector('.header');
+    header.scrollIntoView({behavior: 'smooth', block: "start",});
+  }
   // handle when the user clicks on one of the premade city tiles
   tileClick = async (mesto, zeme) => {
-    console.log(mesto);
+    //console.log(mesto);
+    this.scrollToTop();
     const city = mesto;
     const country = zeme;
     // call api, convert it to JSON, save that in variable 'data'
@@ -79,6 +84,7 @@ class App extends Component {
           error: "Please enter the city and country"
         })
       }
+      
   }
   
   // handle when the user inputs data in the form
@@ -119,7 +125,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div class="header">
+        <div className="header">
           <div className="section-one">
             <Titles />
             <WeatherIcon description={this.state.description} />

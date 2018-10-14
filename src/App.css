@@ -142,6 +142,9 @@ WeatherIcon
     grid-template-rows: auto;
     padding: 50px;
   }
+  .section-one {
+    min-height: 280px;
+  }
   .form-section input {
     width: 100%;
   }
