@@ -21,14 +21,13 @@ class App extends Component {
 
   // show current data for default city (London)
   componentDidMount = async () => {
-    console.log('aaa');
     const city = this.state.city;
     const country = this.state.country;
     // call api, convert it to JSON, save that in variable 'data'
     const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
       if (city && country && data.name) { //data.name is incuded so we setState only when we find city in the database
-        console.log(data);
+        //console.log(data);
         this.setState({
           city: data.name,
           temperature: data.main.temp,
@@ -123,7 +122,7 @@ class App extends Component {
         <div class="header">
           <div className="section-one">
             <Titles />
-            <WeatherIcon description={this.state.des} />
+            <WeatherIcon description={this.state.description} />
           </div>
           <div className="section-two">
           <Weather 
@@ -138,7 +137,7 @@ class App extends Component {
         </div>
         <div className="form-section">
             <Form getWeather={this.getWeather}/>
-          </div>
+        </div>
         <div className='cities-panel container row align-items-center justify-content-center'>
           <CityTile name={'Paris'} city={'paris'} country={'fr'} imageFile={'paris'} tileClick={this.tileClick}/>
           <CityTile name={'New York'} city={'new york'} country={'us'} imageFile={'newyork'} tileClick={this.tileClick}/>

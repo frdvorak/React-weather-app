@@ -24,8 +24,32 @@
   color: black;
 }
 .section-two {
+  position: relative;
   padding: 20px;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+  transform: rotatez(0deg);
+}
+.section-two:before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: lightgray;
+  z-index: -100;
+  transform: rotatez(-5deg);
+  
+}
+.section-two:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 20%; height: 80%;
+  border-left: 10px solid black;
+  border-top: 10px solid black;
+  z-index: -100;
+  transform: rotatez(3deg);
+  
 }
 .section-one h1 {
 
