@@ -14,6 +14,7 @@
 }
 .section-one {
   padding: 0;
+  position: relative;
 }
 .section-one h1 {
   font-family: Impact;
@@ -35,17 +36,23 @@
   font-family: Impact;
   font-size: 25px;
 }
-/** Section Two - WeatherIcon Component *************/
-img {
-  width: 150px;
+/** Section One - WeatherIcon Component *************/
+.section-one img {
+  width: 350px;
   margin-bottom: 20px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.3;
+  z-index: -10;
 }
 
 WeatherIcon
 /** Form section ********************************/
 .form-section {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 .form-section input {
   padding: 10px;
