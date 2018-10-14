@@ -5,14 +5,22 @@ const WeatherIcon = (props) => {
         let icon;
         if (props.description == 'light rain'){
             icon = 'weather-rain';
-        } else if  (props.description == 'light rain'){
-            icon = 'weather-sun-rain';
+        } else if  (props.description == 'heavy rain'){
+            icon = 'weather-heavy-rain';
         } else if  (props.description == 'clear sky'){
             icon = 'weather-sun';
         } else if  ((props.description == 'few clouds')||(props.description == 'broken clouds')){
             icon = 'weather-sun-cloud';
         } else if  (props.description == 'overcast clouds'){
             icon = 'weather-clouds';
+        } else if  (props.description == 'storm'){
+            icon = 'weather-storm';
+        } else if  (props.description == 'heavy storm'){
+            icon = 'weather-heavy-storm';
+        } else if  (props.description == 'fog'){
+            icon = 'weather-fog';
+        } else if  (props.description == 'snow'){
+            icon = 'weather-snow';
         } else {
             icon = 'weather-sun-rain';
         }
