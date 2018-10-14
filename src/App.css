@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto, auto auto;
 }
 
 /** Header styles ********************************/
@@ -63,6 +66,8 @@ WeatherIcon
 /** cities-panel *****************************/
 .cities-panel {
   width: 70% !important;
+  position: relative !important;
+  float: left !important;
 }
 
 /** CityTile *****************************/
@@ -97,6 +102,11 @@ WeatherIcon
   outline: 1px solid rgba(0,0,0,0.3);
   background: lightgray;
   transform: scale(1.03);
+}
+/** Footer STYLES *****************************/
+.footer {
+  background: lightgray;
+  
 }
 
 /** MOBILE STYLES *****************************/

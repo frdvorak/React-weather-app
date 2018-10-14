@@ -5,6 +5,7 @@ import Form from './components/Form';
 import Weather from './components/Weather';
 import CityTile from './components/CityTile';
 import WeatherIcon from './components/WeatherIcon';
+import Footer from './components/Footer';
 
 const API_KEY = '4f6f72308473314b6727d9fb36b07e22';
 
@@ -122,7 +123,7 @@ class App extends Component {
         <div class="header">
           <div className="section-one">
             <Titles />
-            <WeatherIcon description={this.state.description} />
+            <WeatherIcon description={this.state.des} />
           </div>
           <div className="section-two">
           <Weather 
@@ -154,9 +155,8 @@ class App extends Component {
           <CityTile name={'Venice'} city={'venice'} country={'it'} imageFile={'venice'} tileClick={this.tileClick}/>
           <CityTile name={'Washington'} city={'washington'} country={'us'} imageFile={'washington'} tileClick={this.tileClick}/>
           <CityTile name={'Amsterdam'} city={'amsterdam'} country={'nl'} imageFile={'amsterdam'} tileClick={this.tileClick}/>
-          <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" rel="noopener noreferrer">CC 3.0 BY</a></div>
-      
         </div>
+        <Footer />
         </div>
     );
   }
