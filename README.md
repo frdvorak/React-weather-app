@@ -1,8 +1,9 @@
-Currently working on this, app built with React.js + OpenWeatherMap API that shows user the current weather at the selected location
+Currently working on this, app built with React.js, OpenWeatherMap API and Bootstrap, that shows user the current weather at the selected location. You can enter any city/country you want or choose from selection of available cities.
 
 Live DEMO: https://frdvorak.github.io/react-weather-app/
 
-![weather-app](https://user-images.githubusercontent.com/40566364/46694404-a5e53e80-cc04-11e8-838f-e95e64114087.jpg)
+![preview_weather-app-2](https://user-images.githubusercontent.com/40566364/46970370-c738a580-d0b0-11e8-9686-21ecbb16982e.jpg)
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
