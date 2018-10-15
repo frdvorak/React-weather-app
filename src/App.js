@@ -18,7 +18,11 @@ class App extends Component {
     description: undefined,
     error: undefined
   }
-
+  // scroll to the top of the page 
+  scrollToTop = function(){
+    const header = document.querySelector('.header');
+    header.scrollIntoView({behavior: 'smooth', block: "start",});
+  }
   // show current data for default city (London)
   componentDidMount = async () => {
     const city = this.state.city;
@@ -47,11 +51,7 @@ class App extends Component {
         })
       }
   };
-  // scroll to the top of the page 
-    scrollToTop = function(){
-    const header = document.querySelector('.header');
-    header.scrollIntoView({behavior: 'smooth', block: "start",});
-  }
+
   // handle when the user clicks on one of the premade city tiles
   tileClick = async (mesto, zeme) => {
     //console.log(mesto);
@@ -61,9 +61,7 @@ class App extends Component {
     // call api, convert it to JSON, save that in variable 'data'
     const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
-    
     //console.log(data.name)
-   
       if (city && country && data.name) { //data.name is incuded so we setState only when we find city in the database
         console.log(data);
         this.setState({
@@ -90,6 +88,7 @@ class App extends Component {
   // handle when the user inputs data in the form
   getWeather = async (e)=> {
     e.preventDefault(e);
+    this.scrollToTop();
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     // call api, convert it to JSON, save that in variable 'data'

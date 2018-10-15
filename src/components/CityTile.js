@@ -9,6 +9,7 @@ const CityTile = (props) => {
                         style={{backgroundImage: `url(./images/${props.imageFile}.svg)`}}
                 >
                     <h5>{props.name}</h5>
+                    <div className='tileBlock'></div>
                 </span>
             </span>
          );

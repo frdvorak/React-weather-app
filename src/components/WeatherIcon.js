@@ -25,7 +25,7 @@ const WeatherIcon = (props) => {
             icon = 'weather-sun-rain';
         }
         
-        let path = '../images/' + icon + '.svg';
+        let path = './images/' + icon + '.svg';
         //console.log(path);
         return ( 
             <div>

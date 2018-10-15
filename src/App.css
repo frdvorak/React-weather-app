@@ -75,11 +75,11 @@
   z-index: -10;
 }
 
-WeatherIcon
+
 /** Form section ********************************/
 .form-section {
   width: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 .form-section input {
   padding: 10px;
@@ -95,7 +95,6 @@ WeatherIcon
 }
 
 /** CityTile *****************************/
-
 .row {
   position: absolute;
   width: 90%;
@@ -104,29 +103,75 @@ WeatherIcon
   transform: translate(-50%, 0);
   margin-top: 20px;
 }
-
 .cityTile h5 {
   font-size: 20px;
-  background: rgba(255,255,255,0.4);
 }
-
 .cityTile .inner{
   display: block;
   min-height: 150px;
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
-  
 }
 .cityTile {
   transform: scale(1);
   transition: .2s;
+  padding: 10px;
 }
-.cityTile:hover {
-  outline: 1px solid rgba(0,0,0,0.3);
-  background: lightgray;
-  transform: scale(1.03);
+.cityTile .inner:before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 60%; height: 40%;
+  z-index: -1;
+  border-top: 5px solid rgba(0,0,0,0.1);
+  border-left: 3px solid rgba(0,0,0,0.1);
+  transform: rotateZ(-3deg) scale(1);
+  transition: 0.2s;
 }
+.cityTile .inner:after {
+  content: '';
+  position: absolute;
+  bottom: 5px; right: 3px;
+  width: 30%; height: 40%;
+  //background: blue;
+  z-index: -1;
+  border-bottom: 3px solid rgba(0,0,0,0.1);
+  border-right: 4px solid rgba(0,0,0,0.1);
+  transform: rotateZ(-3deg) scale(1);
+  transition: 0.2s;
+}
+.cityTile:hover .inner:before {
+  top: 0px; left: 0px;
+  border-top: 5px solid rgba(0,0,0,0.8);
+  border-left: 3px solid rgba(0,0,0,0.8);
+  transform: rotateZ(1deg) scale(1.1);
+}
+.cityTile:hover .inner:after {
+  bottom: 0px; right: 0px;
+  border-bottom: 3px solid rgba(0,0,0,0.8);
+  border-right: 4px solid rgba(0,0,0,0.8);
+  transform: rotateZ(1.5deg) scale(1.1);
+}
+.tileBlock {
+  display: block;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotateZ(20deg);
+  width: 90%; height: 90%;
+  z-index: -200;
+  transition: 0.3s;
+}
+.cityTile:hover .tileBlock {
+   transform: translate(-50%, -50%) rotateZ(-1deg);
+   background: lightgray;
+  
+}
+
+
+
+
+
 /** Footer STYLES *****************************/
 .footer {
   background: lightgray;
@@ -141,6 +186,12 @@ WeatherIcon
     grid-template-columns: auto;
     grid-template-rows: auto;
     padding: 50px;
+  }
+  .cityTile h5 {
+    background: rgba(255,255,255,0.4);
+  }
+  form {
+    padding: 0 20px;
   }
   .section-one {
     min-height: 280px;
