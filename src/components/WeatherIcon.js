@@ -1,7 +1,6 @@
 import React from 'react';
 
 const WeatherIcon = (props) => {
-        //console.log(props.description);
         let icon;
         if ((props.description === 'light rain')||(props.description === 'moderate rain')||(props.description === 'light intensity drizzle rain')||(props.description === 'shower rain')){
             icon = 'weather-rain';
@@ -26,7 +25,6 @@ const WeatherIcon = (props) => {
         }
         
         let path = './images/' + icon + '.svg';
-        //console.log(path);
         return ( 
             <div>
                 <img src={path} alt='weather-icon'/>

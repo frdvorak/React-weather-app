@@ -16,6 +16,7 @@ class App extends Component {
     country: 'UK',
     humidity: undefined,
     description: undefined,
+    icon: undefined,
     error: undefined
   }
   // scroll to the top of the page 
@@ -38,6 +39,7 @@ class App extends Component {
           country: data.sys.country,
           humidity: data.main.humidity,
           description: data.weather[0].description,
+          icon: data.weather[0].icon,
           error: ""
         });
       } else {
@@ -47,6 +49,7 @@ class App extends Component {
           country: undefined,
           humidity: undefined,
           description: undefined,
+          icon: undefined,
           error: "Please enter the city and country"
         })
       }
@@ -54,7 +57,6 @@ class App extends Component {
 
   // handle when the user clicks on one of the premade city tiles
   tileClick = async (mesto, zeme) => {
-    //console.log(mesto);
     this.scrollToTop();
     const city = mesto;
     const country = zeme;
@@ -63,13 +65,15 @@ class App extends Component {
     const data = await api_call.json();
     //console.log(data.name)
       if (city && country && data.name) { //data.name is incuded so we setState only when we find city in the database
-        console.log(data);
+        
         this.setState({
+          
           city: data.name,
           temperature: data.main.temp,
           country: data.sys.country,
           humidity: data.main.humidity,
           description: data.weather[0].description,
+          icon: data.weather[0].icon,
           error: ""
         });
       } else {
@@ -79,6 +83,7 @@ class App extends Component {
           country: undefined,
           humidity: undefined,
           description: undefined,
+          icon: undefined,
           error: "Please enter the city and country"
         })
       }
@@ -97,7 +102,7 @@ class App extends Component {
     
     //console.log(data.name)
    
-      if (city && country && data.name) { //data.name is incuded so we setState only when we find city in the database
+      if (city && country && data.name) { //data.name is included so we setState only when we find city in the database
         console.log(data);
         this.setState({
           city: data.name,
@@ -105,6 +110,7 @@ class App extends Component {
           country: data.sys.country,
           humidity: data.main.humidity,
           description: data.weather[0].description,
+          icon: data.weather[0].icon,
           error: ""
         });
       } else {
@@ -114,6 +120,7 @@ class App extends Component {
           country: undefined,
           humidity: undefined,
           description: undefined,
+          icon: undefined,
           error: "Please enter the city and country"
         })
 
@@ -136,6 +143,7 @@ class App extends Component {
             country={this.state.country}
             humidity={this.state.humidity}
             description={this.state.description}
+            icon={this.state.icon}
             error={this.state.error}
           />
           </div>
